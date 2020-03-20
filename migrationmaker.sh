@@ -97,6 +97,7 @@ add_parent_concept()
                 printf "\n %5s ${fgreen} Is the concept a ${fgred} Concept set ${normal} input ${fgred} true ${normal} or ${fgred} false:"
                 read Bool
                 #### Adding the prefix and suffix
+
                 sed "s~^~call add_concept(@concept_id,@concept_short_id,@concept_full_id,~;
                 s~$~,\"$Datatype\",\"$Class\",$Bool);~" ./ParentConcepts/Parentconcepts_Withquotes.txt > ./ParentConcepts/ParentconceptMigrationformat.txt
 
