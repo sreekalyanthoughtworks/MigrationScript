@@ -323,7 +323,7 @@ mapping_parent_child_concepts()
                 echo "$line" | xargs >> ./ParentChildMapping/Trimmed_Parent_Child_Mapping.txt
             done
             ## Remove Duplicates.
-            cat ./ParentChildMapping/Trimmed_Parent_Child_Mapping.txt | sort  | uniq > ./ParentChildMapping/Uniq_Parent_Child_mapping.txt
+            cat ./ParentChildMapping/Trimmed_Parent_Child_Mapping.txt | uniq > ./ParentChildMapping/Uniq_Parent_Child_mapping.txt
             ## Keep them in double quotes.
             cat ./ParentChildMapping/Uniq_Parent_Child_mapping.txt | while read line
                 do
